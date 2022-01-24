@@ -1,0 +1,306 @@
+@import url(https://fonts.googleapis.com/css?family=Fira+Sans:300,300i,400,400i,500,500i,700,700i);
+@import url(https://cdn.rawgit.com/tonsky/FiraCode/1.204/distr/fira_code.css);
+@import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+@import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
+@import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+
+body {
+  font-family: 'Fira Sans','Droid Serif', 'Palatino Linotype', 'Book Antiqua', Palatino, 'Microsoft YaHei', 'Songti SC', serif;
+}
+
+.image img {display: block; max-width: 50%; opacity:50%; padding:20px;}
+.scaleimg70 img {transform: scale(0.70);}
+.small70 {font-size: 70%;}
+.small50 {font-size: 50%;}
+.small30 {font-size: 30%;}
+.fitpage img {max-width: 1000px; max-height: 400px;}
+.shrink600 img {max-width: 1000px; max-height: 600px;}
+.shrink500 img {max-width: 1000px; max-height: 500px;}
+
+.remark-code, .remark-inline-code {
+  font-family: 'Fira Code', 'Lucida Console', Monaco, monospace;
+  font-size: 80%;
+}
+
+
+.sliderbox  { 
+  width: 100%; 
+  padding:1em;
+}
+
+.slide-in-left {
+  -webkit-animation: slideInFromLeft 1s ease-in; 
+  animation: slideInFromLeft 1s ease-in ; 
+}
+
+.slide-in-right {
+  -webkit-animation: slideInFromRight 1s ease-in; 
+  animation: slideInFromRight 1s ease-in ; 
+}
+
+@media print {
+  .slide-in-right, .slide-in-left, .reveal-text, .reveal-text::after {
+    animation: none;
+    -webkit-animation: none;
+  }
+
+  .remark-slide-scaler {
+    width: 100% !important;
+    height: 100% !important;
+    transform: scale(1) !important;
+    top: 0 !important;
+    left: 0 !important;
+  }
+}
+
+@page {
+  size: 1024px 768px;
+  margin: 0;
+}
+
+
+/************* animation ****************/
+
+@-webkit-keyframes slideInFromRight { 0% {transform: translateX(100%);}}
+@keyframes slideInFromRight { 0% { transform: translateX(100%); }}
+@-webkit-keyframes slideInFromLeft { 0% { transform: translateX(-100%); }}
+@keyframes slideInFromLeft { 0% { transform: translateX(-100%); }}
+
+
+.reveal-text,
+.reveal-text::after {
+	animation-delay: 1s;
+	animation-iteration-count: 1;
+	animation-duration: 800ms;
+	animation-fill-mode: both;
+	animation-timing-function: cubic-bezier(0.0, 0.0, 0.2, 1);
+}
+
+.reveal-text {
+	position: relative;
+	display: block;
+	animation-name: reveal-text;
+	white-space: nowrap;
+	
+	&::after {
+		content: "";
+		position: absolute;
+		z-index: 999;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		transform: scaleX(0);
+		transform-origin: 0 50%;
+		pointer-events: none;
+		animation-name: revealer-text;
+	}
+	
+}
+
+
+@keyframes reveal-text {
+	from {
+		clip-path: inset(0 100% 0 0);
+	}
+	to {
+		clip-path: inset(0 0 0 0);
+	}
+}
+
+
+@keyframes revealer-text {
+	
+	0%, 50% {
+		transform-origin: 0 50%;
+	}
+	
+	60%, 100% {
+		transform-origin: 100% 50%;		
+	}
+
+	
+	60% {
+		transform: scaleX(1);
+	}
+	
+	100% {
+		transform: scaleX(0);
+	}
+}
+
+
+.remark-slide-content {
+  background-color: #FAFAFA;
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 1.2;
+  padding: 1em 3em 1em 3em;
+}
+
+h1, h2, h3 {
+  margin-top: 0;
+  padding-top: 0.5em;
+  font-weight: 400;
+  margin-left: 0;
+}
+
+.split-30>.column:first-of-type {width: 30%; height:100%; position: absolute; top: 0; left: 0; }
+.font5x {font-size: 5em; color: white;}
+.font4x {font-size: 4em; color: white;}
+.font3x {font-size: 3em; color: white;}
+.hide-slide-number .remark-slide-number { display: none; }
+.bg-main1 {background-color: #67005b; width:100%;}
+
+.img-fill img { object-fit: fill; height:100%; width:100%; overflow: hidden;}
+.titlepageenda {        font-family: 'Yanone Kaffeesatz';
+        font-weight: normal; font-size: 1.5em; background-color: #67005b; color: white}
+
+h1, h2, h3 {color: #67005b;}
+.hl { font-weight: bold; color: #7ebac9;}
+
+.nopadding {
+  padding: 0!important;
+}
+
+ul {list-style: none;}
+
+ul li::before {content: "\2022"; display: inline-block; width: 1em;  margin-left: -1em; color: #67005b;}
+
+ol li::marker {color:#67005b; font-weight: bold}
+ol li {line-height:1.8em;}
+
+table {
+  margin: auto;
+  border-top: 1px solid #666;
+  border-bottom: 1px solid #666;
+}
+table thead th { border-bottom: 1px solid #ddd; }
+th, td { padding: 5px;}
+thead, tfoot, tr:nth-child(even) { background: #eee }
+
+
+blockquote::before {
+   content: open-quote;
+   margin-right: 5px;
+   font-size: 1.2em;
+}
+
+blockquote {
+  border-left: 0.3em solid #ccc;
+  padding: 0 15px;
+  font-style: italic;
+  color: #616161;
+  quotes: "\201C""\201D""\2018""\2019";
+}
+
+blockquote::after {
+  content: close-quote;
+  margin-left: 5px;
+  font-size: 1.2em;
+}
+
+
+      .inverse {
+        background: #69005c;
+        color: #777872;
+        text-shadow: 0 0 20px #333;
+      }
+      .inverse h1, .inverse h2 {
+        color: #f3f3f3;
+        line-height: 0.8em;
+      }
+
+
+    .remark-slide-number {
+      position: inherit;
+    }
+
+    .remark-slide-number .progress-bar-container {
+      position: absolute;
+      bottom: 0;
+      height: 4px;
+      display: block;
+      left: 0;
+      right: 0;
+    }
+
+    .remark-slide-number .progress-bar {
+      height: 100%;
+      background-color: #1a8197;
+    }
+
+.pull-left {
+  float: left;
+  width: 47%;
+}
+.pull-right {
+  float: right;
+  width: 47%;
+.inverse, .inverse h1, .inverse h2, .inverse h3, .inverse a, inverse a > code {
+  color: #fff;
+}
+.pull-right ~ * {
+  clear: both;
+}
+}
+
+.enda-left {
+  float: left;
+  width: 75%;
+}
+.enda-right {
+  float: right;
+  width: 20%;
+.inverse, .inverse h1, .inverse h2, .inverse h3, .inverse a, inverse a > code {
+  color: #fff;
+}
+.enda-right ~ * {
+  clear: both;
+}
+}
+
+.enda-right img{
+    display: block;
+    max-width: 250px;
+    max-height: 250px;
+    background: #E6E7ED;
+    -moz-border-radius: 100px;
+    -webkit-border-radius: 100px;
+    background-position:50% 50%;
+    background-repeat:no-repeat;    
+}
+
+
+img, video, iframe {
+  max-width: 100%;
+}
+
+.green {
+color: green;
+}
+
+.color1{
+color: #FB7A4B;
+font-weight: bold;
+}
+
+.color2{
+color: #01FDF6;
+font-weight: bold;
+}
+
+.color3{
+color: #CBBAED;
+font-weight: bold;
+}
+
+.color4{
+color: #E9DF00;
+font-weight: bold;
+}
+
+.color5{
+color: #03FCBA;
+font-weight: bold;
+}
