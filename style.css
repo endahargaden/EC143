@@ -149,6 +149,7 @@ h1, h2, h3 {
 .font5x {font-size: 5em; color: white;}
 .font4x {font-size: 4em; color: white;}
 .font3x {font-size: 3em; color: white;}
+.fonttab {font-size: 3em;}
 .hide-slide-number .remark-slide-number { display: none; }
 .bg-main1 {background-color: #67005b; width:100%;}
 
@@ -165,9 +166,9 @@ h1, h2, h3 {color: #67005b;}
 
 ul {list-style: none;}
 
-ul li::before {content: "\2022"; display: inline-block; width: 1em;  margin-left: -1em; color: #67005b;}
+ul li::before {content: "\2022"; display: inline-block; width: 1em;  font-size:36px; margin-left: -1em; color: #67005b;}
 
-ol li::marker {color:#67005b; font-weight: bold}
+ol li::marker {color:#67005b; font-weight: bold; size:3em;}
 ol li {line-height:1.8em;}
 
 table {
@@ -304,3 +305,5 @@ font-weight: bold;
 color: #03FCBA;
 font-weight: bold;
 }
+
+.alphatype ol { list-style-type: upper-alpha; }

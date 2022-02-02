@@ -1,0 +1,827 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Econ 143 Principles of Macroeconomics</title>
+
+    <meta charset="utf-8">
+<link href="style.css" rel="stylesheet" />
+
+  </head>
+  <body>
+    <textarea id="source">
+
+class: center, middle, titlepageenda
+
+# .titlepageenda[ EC143 Principles of Macroeconomics]
+
+## .titlepageenda[ Dr Enda Hargaden]
+
+Lecture 2: Labour Markets and Unemployment
+
+---
+## Unemployment is a feature of every major economy
+
+.center[.shrink600[![Unemployment in Ireland](i/cso_unemp.png)]]
+
+---
+
+## You're probably making a very good decision
+
+
+.center[.shrink500[![Unemployment by Education](i/unemp_by_education.png)]]
+
+---
+### A simple model of unemployment in "the" labour market
+
+.center[.shrink500[![Labour Market Equilibirum](i/labor_mkt_equi.png)]]
+
+---
+### A simple model of unemployment in "the" labour market
+
+.center[.shrink600[![Labour Market Equilibirum](i/labor_mkt_equi3.png)]]
+
+---
+
+# That's not _our_ model of unemployment
+
+We will focus on a more .hl[intricate] model of unemployment. 
+--
+Firms set prices to make profits. They will optimally choose how much of this to share with their workers. 
+
+Labourers have the choice of working or not. Jobs pay them more than reservation wages, meaning they earn .hl[employment rents]. 
+
+
+- Firms .color1[cannot perfectly observe] their employees.
+- We will analyze this as an .hl[Incomplete Contracts] game.
+- We will see how this setup can lead to .color5[unemployment].
+
+---
+
+# Agenda for this topic
+
+* Study firms as producers of differentiated products
+* Study employees and employers in a .color1[Principal-Agent model]
+* Learn about **game theory** and the .color3[Nash Equilbrium]
+* Model price-setting .hl[and] wage-setting behaviour of firms, which determines .hl[economy-wide unemployment] rate and real wage
+* Explain why unemployment exists *even in equilibrium*
+* Show how .color3[the government] can affect wages and unemployment by its policies
+* Analyse the role of **labour unions**
+
+
+_Note_ this will involve wage-setting **and** price-setting components. We won't get to price-setting today.
+
+---
+
+class: inverse, middle, center
+
+# Measuring unemployment
+
+---
+
+# Definition of *unemployed*
+
+The **unemployed** are the people who: 
+
+1.    Are not in paid employment or self-employment
+1.    Are available for work 
+1.    Are actively seeking work
+
+---
+
+# The unemployed are a small fraction of the population
+
+.center[.shrink600[![The labour market](i/workingpop.jpg)]]
+
+---
+
+# Using the US as an example (step 1)
+
+.center[.shrink600[![US working population](i/usa1.png)]]
+
+---
+
+# Using the US as an example (step 2)
+
+.center[.shrink600[![US working population](i/usa2.png)]]
+
+---
+
+# Using the US as an example (step 3)
+
+.center[.shrink600[![US working population](i/usa3.png)]]
+
+---
+# Labour market statistics
+
+
+.pull-left[
+Two countries with the same unemployment rate can differ in their employment rates if one has a high participation rate and the other has a low one.
+
+.color1[The structure of the labour market] differs widely across countries.
+
+]
+
+.pull-right[
+.color2[Participation Rate] $$ = \frac{\text{Labour Force}}{\text{Pop of Working Age}} $$
+
+.color3[Unemployment Rate] $$ = \frac{\text{Unemployed}}{\text{Labour Force}} $$ 
+
+.color4[Employment Rate] $$ = \frac{\text{Employed}}{\text{Pop of Working Age}} $$ 
+]
+
+
+---
+
+class: inverse, center, middle
+
+# Firms
+
+---
+
+# Context for studying firms
+
+In models of economic interactions, **bargaining determines the division of social surplus**. 
+
+All parties gain from these interactions, but have .hl[conflicting interests] over how these gains (profits) are shared.
+
+* How are wages determined within firms?
+* What are the economy-wide effects of firm interactions?
+
+---
+
+# What is a firm?
+
+Firm = a business organisation which
+
+* Employs people
+* Purchases inputs to produce market goods and services
+* Sets prices greater than the cost of production
+
+<blockquote>The firm in a capitalist economy is a miniature, privately owned, centrally planned economy</blockquote>
+
+---
+
+# Firms versus markets
+
+In a capitalist economy, the .hl[division of labour] is coordinated in two ways: firms and markets.
+
+Coordination within firm differs from coordination via markets:
+* .color1[concentration of economic power] in the hands of the owners/managers allows them to issue commands to workers
+* Power is .color1[decentralized] in markets, so decisions are autonomous and voluntary
+
+Please note: pro-market is not the same thing as pro-business!
+
+---
+
+# Within firms, there are conflicts
+
+In the vast majority of firms, there is .color1[separation of ownership and control].
+
+Managers ≠ owners, and managers ≠ employees. These groups have **different incentives**.
+
+---
+
+## Within firms, there is asymmetric information
+
+The firm’s **profits** legally belong to the people who own the firm’s assets.
+
+* Managers’ actions have impact on profits...
+* ...but if profits increase thanks to managers’ work, they will not automatically benefit. 
+
+This creates a .hl[conflict of interest] between managers and owners.
+
+---
+
+class: bg-main1 split-30 hide-slide-number, middle
+
+.column.bg-main3[
+]
+.column.slide-in-right[
+.sliderbox.bg-main2.vmiddle[
+.font3x[We need to talk about asymmetric information]
+]]
+
+---
+
+# This departs from Leaving Cert economics
+
+Perfect competition assumes everyone .hl[atomistic consumers] who are .color3[perfectly informed].
+
+One area of economics that studies stituations where your payoffs depend on others' actions is .color1[**game theory**]. Payoffs are interdependent, like we said the macroeconomy is.
+
+---
+
+### Consider taking a penalty: .hl[conflict of interest], and .hl[asymmetric information]
+
+.center[.shrink500[![Penalty kick](i/penalty.jpg)]]
+
+
+---
+
+## The most famous .color1[game] is the **Prisoners Dilemma**
+
+There's been a robbery. The cops have arrested two culprits, both with long histories of crime. 
+The prisoners are held in different locations. The cops sit down to interview them.
+
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;
+  overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;
+  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg .tg-c3ow{border-color:inherit;text-align:center;vertical-align:top}
+.tg .tg-vpkt{border-color:inherit;color:#000000;font-weight:bold;text-align:center;vertical-align:top}
+.tg .tg-7btt{border-color:inherit;font-weight:bold;text-align:center;vertical-align:top}
+.tg .tg-z0oy{border-color:inherit;color:#f56b00;font-weight:bold;text-align:center;vertical-align:top}
+</style>
+
+<table class="tg">
+<thead>
+  <tr>
+    <th class="tg-c3ow"></th>
+    <th class="tg-c3ow"></th>
+    <th class="tg-vpkt" colspan="2">Paddy</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td class="tg-c3ow"></td>
+    <td class="tg-c3ow"></td>
+    <td class="tg-7btt">Deny</td>
+    <td class="tg-7btt">Confess</td>
+  </tr>
+  <tr>
+    <td class="tg-z0oy" rowspan="2">Aidan</td>
+    <td class="tg-7btt">Deny</td>
+    <td class="tg-7btt"><span style="color:#F56B00">-1</span>, <span style="color:#000">-1</span></td>
+    <td class="tg-7btt"><span style="color:#F56B00">-10</span>, 0</td>
+  </tr>
+  <tr>
+    <td class="tg-7btt">Confess</td>
+    <td class="tg-7btt"><span style="color:#CE6301">0</span>, -10</td>
+    <td class="tg-7btt"><span style="color:#F56B00">-8</span>, -8</td>
+  </tr>
+</tbody>
+</table>
+
+---
+
+## John Nash gave us a tool to analyze this game
+
+The water bottle and equilibrium.
+
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;
+  overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;
+  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg .tg-c3ow{border-color:inherit;text-align:center;vertical-align:top}
+.tg .tg-vpkt{border-color:inherit;color:#000000;font-weight:bold;text-align:center;vertical-align:top}
+.tg .tg-7btt{border-color:inherit;font-weight:bold;text-align:center;vertical-align:top}
+.tg .tg-z0oy{border-color:inherit;color:#f56b00;font-weight:bold;text-align:center;vertical-align:top}
+</style>
+
+<table class="tg">
+<thead>
+  <tr>
+    <th class="tg-c3ow"></th>
+    <th class="tg-c3ow"></th>
+    <th class="tg-vpkt" colspan="2">Paddy</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td class="tg-c3ow"></td>
+    <td class="tg-c3ow"></td>
+    <td class="tg-7btt">Deny</td>
+    <td class="tg-7btt">Confess</td>
+  </tr>
+  <tr>
+    <td class="tg-z0oy" rowspan="2">Aidan</td>
+    <td class="tg-7btt">Deny</td>
+    <td class="tg-7btt"><span style="color:#F56B00">-1</span>, <span style="color:#000">-1</span></td>
+    <td class="tg-7btt"><span style="color:#F56B00">-10</span>, 0</td>
+  </tr>
+  <tr>
+    <td class="tg-7btt">Confess</td>
+    <td class="tg-7btt"><span style="color:#CE6301">0</span>, -10</td>
+    <td class="tg-7btt"><span style="color:#F56B00">-8</span>, -8</td>
+  </tr>
+</tbody>
+</table>
+
+.color2[Strategies], .color1[Payoffs], .color3[Best Responses], .color5[**Nash Equilibrium**].
+
+---
+
+# Game Theory and Nash Equilibrium
+
+In game theory, if everyone is playing their best response to the strategies of everyone else, these strategies are termed a .color1[Nash equilibrium].
+
+Driving on the left.
+
+Europe and stepping right.
+
+Facing the door in an elevator.
+
+---
+
+class: inverse, middle, center
+
+# Let's pull this back to firms
+
+---
+
+## How do firms address asymmetric information?
+
+A lot of effort goes into .hl[aligning interests] within firms. For example,
+
+1. Monitor the managers’ performance
+1. Link the managers’ pay to the performance of the company’s share price
+
+These may seem obvious, but only arise because of the conflict of interest.
+
+---
+
+class: inverse, center, middle
+
+# Employees
+
+---
+
+## This conflict permeates down the chain
+
+Employees also have incentives that deviate from their employers.
+
+Contracts are typically .color5[incomplete]:
+* some tasks depend on future (unknown) events
+* some aspects of the job are difficult to measure and base wages on e.g. effort
+
+An **incomplete contract** does not specify, in an enforceable way, every aspect of the exchange that affects the interests of parties.
+
+---
+
+# Workers' effort
+
+If firms can’t directly measure effort, why do workers work hard?
+
+*    work ethic
+*    feelings of responsibility 
+*    to reciprocate a feeling of gratitude for good working conditions
+*    benefits for measurable output
+*    promotions
+*    fear of being fired
+
+---
+# Workers' effort
+
+If firms can’t directly measure effort, why do workers work hard?
+
+*    work ethic
+*    feelings of responsibility 
+*    to reciprocate a feeling of gratitude for good working conditions
+*    benefits for measurable output
+*    promotions
+*    **fear of being fired**
+
+This will be our focus, our lens. Workers like getting paid, and don't want to lose their jobs.
+
+This will be the .hl[Labour Discipline Model].
+
+---
+## In our model, employees earn "rents"
+
+--
+Employees fear getting fired when they are paid more than their .hl[reservation option] = they receive employment rent.
+
+.color1[Employment rent] = cost of job loss, which includes
+1. Lost income while searching for a job
+1. Costs required to start a new job e.g. relocation
+1. Loss of non-wage benefits e.g. medical insurance
+1. Social costs (stigma of being unemployed)
+
+Employment rent = wage – reservation wage – disutility of effort
+
+---
+
+class: inverse, center, middle
+
+# Labour Discipline Model
+
+---
+
+# Wages and Effort
+
+The employer cannot directly measure the worker’s effort
+
+Large employment rent → large cost of job loss → 
+worker puts in more effort to reduce chance of getting fired
+ 
+One way to increase the cost of job loss is for the firm to raise wages.
+
+---
+
+# The Employment "Game"
+
+Rather than a "magic hat" of labour demand, we will model wages as a .color1[game].
+
+1. The employer chooses a wage. As long as the worker works hard enough, she will keep her job at the offered wage. 
+1. The worker chooses a level of work effort, taking into account the costs of losing her job if she does not provide enough effort.
+
+
+Firms care about .hl[Profit] = Worker's output - Wage.
+
+Workers care about .hl[Employment rent] = Wage - Disutility of Effort - Reservation Wage. 
+
+---
+
+# Consider an employee's best response
+
+Consider the following **hypothetical**.
+
+Let's say an employer first offers €300 a week. 
+Contrast that to when an employer offers €400 a week.
+
+
+Do we think effort:
+.alphatype[
+1. Goes up
+1. Stays the same
+1. Goes down
+]
+
+--
+
+**It goes up.** In .hl[response] to a higher offered wage, workers .color1[increase] effort.
+
+---
+
+# Worker's Best Response Curve
+
+**Best response curve** shows the optimal amount of effort workers will exert for each wage offered.
+
+Represents the firm’s .color1[feasible frontier] for wages and effort
+
+
+Slope of best response curve = **M**arginal **R**ate of **T**ransformation. This is a little bit like an elasticity (not quite the same).
+
+
+
+---
+
+# Worker's Best Response Curve
+.center[.shrink500[![Worker Best Response](i/worker_br6.svg)]]
+
+---
+
+
+class: inverse, middle, center
+
+# Okay, that's workers. What about employers?
+
+---
+
+# Firm’s best response
+
+To maximise profits, firms want to .color1[minimise the costs of production].
+
+Because there is a trade-off between wages and effort, the employer should .hl[find a feasible combination of effort and wage] that minimises the cost per unit of production.
+
+
+---
+
+# Isocost lines
+
+**Iso** comes from the Greek for equal. Very similar to the Latin term *equi*.
+
+An .color1[isocost line] is a line where costs are the same.
+
+---
+# Isocost lines for firms in the effort game
+The .hl[cost of effort] is the same at all points on an isocost line.
+.center[.shrink500[![Isocost for Effort](i/iso5.svg)]]
+---
+
+
+# Isocost lines for firms in the effort game
+
+The .hl[cost of effort] is the same at all points on an isocost line. Slope of isocost curve = **MRS** = the rate at which the employer is willing to increase wages to get higher effort.
+.center[.fitpage[![Isocost for Effort](i/isocost_firm.png)]]
+
+
+---
+
+class: inverse, middle, center
+
+# Putting it together
+
+---
+
+# In search of equilibrium
+
+Workers have their Marginal Rate of Transformation, **MRT**, converting wage offers into effort levels they're willing to exert.
+
+Employers have their Marginal Rate of Substitution, **MRS**, measuring employers' willingness to increase wages to get higher effort.
+
+---
+
+# Determining wages
+
+Profits are maximised at the steepest isocost line (i.e., lowest cost line), subject to the worker’s best response curve.
+
+In equilibrium, **MRT = MRS**.
+
+--
+
+.hl[Efficiency wage theory] = wages set higher than the reservation wage so workers will care about losing the job and provide more effort. 
+
+---
+# Determining wages
+In equilibrium, **MRT = MRS**.
+.center[.shrink500[![Micro-equilibrium](i/u6equi5.svg)]]
+---
+
+# Involuntary unemployment
+
+Involuntary unemployment = being out of work, but preferring to have a job at the wages and working conditions that otherwise identical employed workers have. 
+
+There must .color1[always] be involuntary unemployment in the labour discipline model.
+
+--
+Why? In equilibrium, both wages and involuntary unemployment have to be high enough **to ensure employment rent is high enough** for workers to put in effort.
+
+---
+
+# Agenda for today
+
+1. Shifting a Best Response Curve
+1. Firms' optimal decisions
+1. The wage setting curve
+1. The price setting curve
+1. Equilibrium, and its variants
+---
+
+# The world can shift a Best Response Curve
+
+.center[.shrink500[![The Great Resignation](i/great_resig.png)]]
+
+---
+
+# The Great Resignation - New Equilibrium
+The best response function will shift in reaction to changes in:
+
+* **the utility of the things that the wage can buy**
+* the disutility of effort
+* the reservation wage 
+* the probability of getting fired at each effort level
+
+---
+
+# The world can shift a Best Response Curve
+.center[.shrink500[![Worker Best Response](i/shifting_br3.svg)]]
+
+---
+
+# But what about all this earlier stuff?
+
+.center[.shrink600[![The labour market](i/workingpop.jpg)]]
+
+--
+
+### Incorporating non-workers requires more work on firms' .hl[profit maximizing] decisions
+
+---
+
+# Firms have costs
+
+Average costs (usually U-shaped in quantity), marginal costs (usually upward sloping), total costs (increasing in quantity).
+
+To be profitable, they must set a Price per unit .color1[higher] than Average Cost per unit.
+
+
+---
+
+# Firms have customers
+
+By testing sensitivity to price changes, firms can estimate their .color1[demand curve]
+
+.center[.fitpage[![A firm's demand curve](i/demand.jpg)]]
+
+.color1[Demand curve] = quantity that consumers will buy at each price.
+
+---
+
+# Firms care about profits
+
+$$ \text{Profits = Total Revenue - Total Costs} $$
+
+$$ = PQ - C(Q) $$
+
+--
+
+$$ = Q \times (P - AC) $$
+
+The combinations of .color2[Price] and .color3[Quantity] that return the same profit are called **Isoprofit Curves**
+
+---
+
+# Firms care about profits
+
+Isoprofit curves show price-quantity combinations that give the same profit. 
+
+
+.center[.fitpage[![Isoprofits](i/isoprofits.svg)]]
+
+--
+
+Firms want to reach the .color1[highest feasible] Isoprofit Curve.
+
+
+---
+
+## Consumer demand puts limits on firms' (iso)profits
+
+--
+.center[.fitpage[![Optimal P and Q](i/firms_optimization.svg)]]
+
+The wage rate better be below the Price.
+
+---
+
+# The marketing dep't chooses price and q
+
+.center[.shrink500[![Optimal P and Q](i/profit1.svg)]]
+
+---
+
+# The marketing dep't chooses price and q
+
+.center[.shrink500[![Optimal P and Q](i/profit2.svg)]]
+
+---
+
+class: inverse, middle, center
+
+# Recall how Wages are set
+---
+# Determining wages
+In equilibrium, **MRT = MRS**.
+.center[.shrink500[![Micro-equilibrium](i/u6equi5.svg)]]
+---
+
+# So now we have TWO relationships
+
+* .color1[Firms and employees]: firms set wage sufficiently high to make job loss costly, in order to motivate employees to work hard in the absence of complete contracts
+* .color2[Firms and customers]: firms set a markup above the cost of production, to maximise their profits subject to demand
+
+But recall that consumers care how much their wages actually buy.
+
+---
+
+# The real wage
+
+The real wage is the nominal wage divided by the price level of the bundle of consumer goods purchased. (Like Real GDP!)
+
+$$ \text{Real Wage} = \frac{W}{P} $$
+
+1. .hl[Each firm] decides on its: price, wage, how many people to hire
+1. Adding up all of these across .color1[all firms] gives the total employment in the economy and the real wage.
+
+---
+
+class: enda, middle
+
+# We need to move to the **wage-setting curve** and the **price-setting curve**
+
+---
+
+# The **Wage-Setting Curve** (Part 1)
+
+.center[.shrink500[![Wage Setting Part 1](i/wage_curve1.png)]]
+---
+
+# The **Wage-Setting Curve** (Part 2)
+
+.center[.shrink500[![Wage Setting Part 2](i/wage_curve2.png)]]
+---
+
+# The **Price Setting Curve**
+
+.center[.fitpage[![Optimal P and Q](i/profit2.svg)]]
+
+---
+# Distribution of Output
+
+The firm’s choice of profit-maximizing price also determines the firm’s optimal markup above the marginal cost of production.
+
+$$ \text{Price} = \frac{\text{Profit}}{\text{Output}} + \frac{\text{Nominal Wage}}{\text{Output}} $$
+
+For the economy as a whole, this translates into how output is distributed between the firm-owners and the workers.
+
+$$ \frac{\text{Output}}{\text{Worker}} = \text{Real Profit} + \text{Real Wage}$$
+
+--
+or, equivalently,
+$$ \text{Real Wage} =\frac{\text{Output}}{\text{Worker}} - \text{Real Profit} $$
+
+---
+
+# The **Price-Setting Curve**
+
+Once firms set their prices, this determines the level of output and markup in the economy. This then pins down the real wage.
+
+.center[.fitpage[![Price Setting](i/price_setting.png)]]
+
+---
+
+class: inverse, middle, center
+
+# The Labour Market's Nash Equilibrium
+
+---
+
+# The Labour Market's _Nash Equilibrium_
+
+### The Nash equilibrium of the labour market is where the wage- and price-setting curves intersect. 
+
+All parties are doing the best they can, given what everyone else is doing:
+
+* The firms are offering the least wage to ensure workers’ effort  
+* Employment is the highest it can be, given the wage 
+* Those who have jobs cannot improve their situation by asking for higher pay or working less hard
+* Those who do not have jobs would like to work, but cannot persuade firms to hire them by accepting lower wage (labour discipline concerns)
+
+---
+
+# The Labour Market's Nash Equilibrium
+
+.center[.shrink500[![Labour Market Eqm](i/labour_equi.svg)]]
+
+---
+
+# Unemployment emerges from this model
+
+**Unemployment** = _excess supply_ in the labour market.
+
+.color1[**There will always be unemployment in labour market equilibrium**]
+
+* No unemployment → zero cost of job loss → no effort
+* Therefore some unemployment is necessary to motivate workers
+* These are the involuntarily unemployed
+---
+
+class: inverse, middle, center
+
+## This point is the cutoff for midterm prep
+
+---
+
+class: enda, middle, center
+
+### But we still have more to cover using these models
+
+---
+
+# Agenda for rest of this unit
+
+1. Unemployment and aggregate demand
+1. Government intervention
+1. Unions and wage bargaining
+1. Education, immigration, female labour participation
+
+
+    </textarea>
+    <script src="remark.js">
+    </script>
+    <script>
+      var slideshow = remark.create({slideNumberFormat: (current, total) => `
+        <div class="progress-bar-container">
+          <div class="progress-bar" style="width: ${current/total*100}%">
+          </div>
+        </div>
+      `, ratio: "16:9"});
+    </script>
+
+ <script async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_HTMLorMML" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+      // Setup MathJax
+      MathJax.Hub.Config({
+          tex2jax: {
+          inlineMath: [['$','$'], ['\\(','\\)']],
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+          }
+      });
+      MathJax.Hub.Queue(function() {
+          $(MathJax.Hub.getAllJax()).map(function(index, elem) {
+              return(elem.SourceElement());
+          }).parent().addClass('has-jax');
+      });
+
+      MathJax.Hub.Configured();
+    </script>
+
+  </body>
+</html>
