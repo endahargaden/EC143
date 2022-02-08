@@ -16,6 +16,7 @@ body {
 .fitpage img {max-width: 1000px; max-height: 400px;}
 .shrink600 img {max-width: 1000px; max-height: 600px;}
 .shrink500 img {max-width: 1000px; max-height: 500px;}
+.u {text-decoration: underline}
 
 .remark-code, .remark-inline-code {
   font-family: 'Fira Code', 'Lucida Console', Monaco, monospace;
@@ -166,7 +167,7 @@ h1, h2, h3 {color: #67005b;}
 
 ul {list-style: none;}
 
-ul li::before {content: "\2022"; display: inline-block; width: 1em;  font-size:36px; margin-left: -1em; color: #67005b;}
+ul li::before {content: "\2022"; display: inline-block; width: 1em;  font-size:24px; margin-left: -1em; color: #67005b;}
 
 ol li::marker {color:#67005b; font-weight: bold; size:3em;}
 ol li {line-height:1.8em;}
@@ -287,7 +288,7 @@ font-weight: bold;
 }
 
 .color2{
-color: #01FDF6;
+color: #27aae1;
 font-weight: bold;
 }
 
